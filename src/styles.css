@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    user-select: none;
 }
 
 .body {
@@ -15,6 +16,12 @@
 .number {
     font-size: 100px;
     margin-bottom: 50px;
+}
+.number:hover {
+    color: yellow;
+}
+.number:active {
+    color: white;
 }
 
 .buttons {
@@ -32,9 +39,15 @@ button {
     border-radius: 10px;
     border: 1px solid white;
 }
-.btn1:active {
+.btn1:hover {
     color: red;
 }
-.btn2:active {
+.btn2:hover {
     color: greenyellow;
+}
+.btn1:active {
+    color: white;
+}
+.btn2:active {
+    color: white;
 }
