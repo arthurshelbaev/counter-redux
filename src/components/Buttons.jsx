@@ -1,26 +1,20 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import "../styles.css"
+import { useDispatch, useSelector } from 'react-redux';
 
-
-const Buttons = () => {
+const Number = () => {
 
     const dispatch = useDispatch()
 
-    const handleInc = () => {
-        dispatch({type: "plus"})
+    const breeak = () => {
+        dispatch({type: "break"})
     }
 
-    const handleDec =() => {
-        dispatch({ type: "minus" })
-    }
-
+    const number = useSelector((state) => state.number)
+    const theme = useSelector((state) => state.theme)
+    
     return (
-        <div className='buttons'>
-            <button className='btn1' onClick={handleDec}>–</button>
-            <button className='btn2'onClick={handleInc}>+</button>
-        </div>
+        <div className='number' onClick={breeak}>{number}</div>
     );
 };
 
-export default Buttons;
+export default Number;
